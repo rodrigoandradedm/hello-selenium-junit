@@ -5,7 +5,9 @@ pipeline {
         stage('Test') {
             steps {
                 git branch: 'main', url: 'http://10.250.14.1:8929/root/hello-selenium-junit'
-                sh './gradlew clean test'    
+                withGradle {
+                    sh './gradlew test'
+                }    
             }                 
         }
         stage('Build') {
