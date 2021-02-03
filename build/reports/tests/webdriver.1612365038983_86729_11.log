@@ -1,0 +1,32 @@
+1612365039226	geckodriver	INFO	Listening on 127.0.0.1:2325
+1612365039326	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3ImGof"
+*** You are running in headless mode.
+
+(firefox:87302): GLib-GObject-WARNING **: 16:10:40.057: invalid (NULL) pointer instance
+
+(firefox:87302): GLib-GObject-CRITICAL **: 16:10:40.057: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:87353): GLib-GObject-WARNING **: 16:10:40.967: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:87353): GLib-GObject-CRITICAL **: 16:10:40.967: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:87585): GLib-GObject-WARNING **: 16:10:41.464: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:87585): GLib-GObject-CRITICAL **: 16:10:41.464: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:87643): GLib-GObject-WARNING **: 16:10:43.615: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:87643): GLib-GObject-CRITICAL **: 16:10:43.615: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+1612365045685	Marionette	INFO	Listening on port 40035
+1612365045837	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612365053377	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1612365065946	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612365117959	Marionette	INFO	Stopped listening on port 40035
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

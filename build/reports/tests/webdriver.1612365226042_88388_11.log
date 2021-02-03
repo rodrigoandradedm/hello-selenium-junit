@@ -1,0 +1,25 @@
+1612365227131	geckodriver	INFO	Listening on 127.0.0.1:15101
+1612365228653	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHPvxF3"
+*** You are running in headless mode.
+
+(firefox:88470): GLib-GObject-WARNING **: 16:13:49.525: invalid (NULL) pointer instance
+
+(firefox:88470): GLib-GObject-CRITICAL **: 16:13:49.525: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:88724): GLib-GObject-WARNING **: 16:13:51.001: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:88724): GLib-GObject-CRITICAL **: 16:13:51.001: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:88748): GLib-GObject-WARNING **: 16:13:51.360: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:88748): GLib-GObject-CRITICAL **: 16:13:51.360: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:88802): GLib-GObject-WARNING **: 16:13:54.263: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:88802): GLib-GObject-CRITICAL **: 16:13:54.263: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+1612365235149	Marionette	INFO	Listening on port 33197
+1612365235240	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612365244774	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1612365264597	Marionette	INFO	Stopped listening on port 33197

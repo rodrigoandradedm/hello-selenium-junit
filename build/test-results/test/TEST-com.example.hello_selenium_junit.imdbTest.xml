@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.hello_selenium_junit.imdbTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-03T15:26:56" hostname="ubuntu" time="19.481">
+  <properties/>
+  <testcase name="imdbwandavision()" classname="com.example.hello_selenium_junit.imdbTest" time="19.481"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1612366016170	geckodriver	INFO	Listening on 127.0.0.1:18128
+1612366016188	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXzrhIP"
+*** You are running in headless mode.
+
+(firefox:93394): GLib-GObject-WARNING **: 16:26:56.824: invalid (NULL) pointer instance
+
+(firefox:93394): GLib-GObject-CRITICAL **: 16:26:56.826: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:93653): GLib-GObject-WARNING **: 16:26:57.657: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93653): GLib-GObject-CRITICAL **: 16:26:57.657: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:93673): GLib-GObject-WARNING **: 16:26:57.891: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93673): GLib-GObject-CRITICAL **: 16:26:57.891: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:93735): GLib-GObject-WARNING **: 16:27:00.174: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93735): GLib-GObject-CRITICAL **: 16:27:00.174: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:93737): GLib-GObject-WARNING **: 16:27:00.257: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93737): GLib-GObject-CRITICAL **: 16:27:00.257: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+1612366020571	Marionette	INFO	Listening on port 36469
+1612366020645	Marionette	WARN	TLS certificate errors will be ignored for this session
+Feb 03, 2021 4:27:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1612366034176	Marionette	INFO	Stopped listening on port 36469
+]]></system-err>
+</testsuite>

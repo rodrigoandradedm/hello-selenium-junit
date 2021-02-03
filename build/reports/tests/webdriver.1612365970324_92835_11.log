@@ -1,0 +1,36 @@
+1612365970903	geckodriver	INFO	Listening on 127.0.0.1:24931
+1612365971660	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5xqFre"
+*** You are running in headless mode.
+
+(firefox:92908): GLib-GObject-WARNING **: 16:26:12.547: invalid (NULL) pointer instance
+
+(firefox:92908): GLib-GObject-CRITICAL **: 16:26:12.548: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:92962): GLib-GObject-WARNING **: 16:26:13.584: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:92962): GLib-GObject-CRITICAL **: 16:26:13.584: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(/usr/lib/firefox/firefox:92979): GLib-GObject-WARNING **: 16:26:13.889: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:92979): GLib-GObject-CRITICAL **: 16:26:13.889: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:93058): GLib-GObject-WARNING **: 16:26:16.409: invalid (NULL) pointer instance
+
+(/usr/lib/firefox/firefox:93058): GLib-GObject-CRITICAL **: 16:26:16.409: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+1612365976544	Marionette	INFO	Listening on port 33243
+1612365976635	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612365984216	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource:///actors/ContentMetaChild.jsm, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1612365996033	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612366035659	Marionette	INFO	Stopped listening on port 33243
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
