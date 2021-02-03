@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
@@ -28,7 +29,9 @@ public class RobobarTest {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    driver = new FirefoxDriver();
+    FirefoxOptions options = new FirefoxOptions();
+    options.setHeadless(true);
+    driver = new FirefoxDriver(options);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
