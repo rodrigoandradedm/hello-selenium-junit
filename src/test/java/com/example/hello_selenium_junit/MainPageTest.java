@@ -7,6 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +30,8 @@ public class MainPageTest {
 
     @BeforeEach
     public void setUp() {
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
         Configuration.startMaximized = true;
         open("https://www.jetbrains.com/");
     }
