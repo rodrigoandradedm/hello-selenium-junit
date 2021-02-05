@@ -12,11 +12,11 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'sed -i "s%"'"firefox"'"%"'"${BROWSER}"'"%g" "src/test/java/com/example/hello_selenium_junit/imdbTest.java"'
+                sh 'sed -i "s%firefox%${BROWSER}%g" "src/test/java/com/example/hello_selenium_junit/imdbTest.java"'
 
-                sh 'sed -i "s%"'"firefox"'"%"'"${BROWSER}%"'"g" "src/test/java/com/example/hello_selenium_junit/RobobarTest.java"'
+                sh 'sed -i "s%firefox%${BROWSER}%g" "src/test/java/com/example/hello_selenium_junit/RobobarTest.java"'
 
-                sh 'sed -i "s%"'"firefox"'"%"'"${BROWSER}"'"%g" "src/test/java/com/example/hello_selenium_junit/SearchTest.java"'
+                sh 'sed -i "s%firefox%${BROWSER}%g" "src/test/java/com/example/hello_selenium_junit/SearchTest.java"'
                 
                 sh './gradlew test'
             }
