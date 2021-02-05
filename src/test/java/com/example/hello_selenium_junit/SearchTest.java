@@ -12,19 +12,28 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 public class SearchTest {
     private WebDriver driver;
+    private String browser;
     private Map<String, Object> vars;
     JavascriptExecutor js;
 
     @BeforeEach
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName",  "firefox");
+        capabilities.setBrowserName(System.getProperty("browser"));
+        //capabilities.setCapability("browserName",  "firefox");
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+        //open("about:blank");
+        //driver = getWebDriver(this.browser);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
+
+
 
     @AfterEach
     public void tearDown() {

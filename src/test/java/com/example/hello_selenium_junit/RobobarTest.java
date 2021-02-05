@@ -26,7 +26,7 @@ public class RobobarTest {
   @BeforeEach
   public void setUp() throws MalformedURLException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("browserName",  "firefox");
+    capabilities.setCapability("browserName",  "chrome");
     driver = new RemoteWebDriver(new URL("http://localhost:4444/"), capabilities);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
@@ -38,7 +38,7 @@ public class RobobarTest {
   @Test
   public void robobar() {
     driver.get("http://10.250.14.1:3000");
-    //driver.manage().window().setSize(new Dimension(843, 777));
+    driver.manage().window().setSize(new Dimension(843, 777));
     try {
       Thread.sleep(3000);
     } catch (InterruptedException e) {

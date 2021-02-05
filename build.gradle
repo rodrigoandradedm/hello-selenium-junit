@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.8.1'
+    id 'checkstyle'
 }
 
 group 'com.example'
@@ -32,8 +33,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    systemProperty "selenide.browser", "firefox"
-    //systemProperty "selenide.headless", "true"
+    systemProperty "selenide.browser", "chrome"
+    systemProperty "selenide.remote", "http://10.250.14.1:4444"
+    systemProperty "selenide.headless", "false"
+
 }
 allure {
     autoconfigure = true
@@ -42,4 +45,7 @@ allure {
     useJUnit5 {
         version = "${allureVersion}"
     }
+}
+checkstyle {
+    ignoreFailures = true
 }
