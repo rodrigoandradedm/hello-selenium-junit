@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "${BROWSER}"'
-                sh 'sed -i 's/capabilities.setCapability("browserName",  "firefox");/capabilities.setCapability("browserName",  "${BROWSER}");/g' "src/test/java/com/example/hello_selenium_junit/*.java"'
+                sh 'sed -i 's/systemProperty "selenide.browser", "firefox"/systemProperty "selenide.browser", "${BROWSER}"/g' "build.gradle"'
                 sh './gradlew test'
             }                 
         }
