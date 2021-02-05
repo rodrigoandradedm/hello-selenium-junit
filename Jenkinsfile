@@ -12,6 +12,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'echo \" '
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "firefox");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/imdbTest.java"'
 
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "firefox");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/RobobarTest.java"'
