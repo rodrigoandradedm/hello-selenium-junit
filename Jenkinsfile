@@ -11,14 +11,14 @@ pipeline {
             }                 
         }
         stage('Test') {
-            steps {
-                sh 'echo \" '
+            steps {'
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "firefox");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/imdbTest.java"'
 
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "firefox");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/RobobarTest.java"'
 
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "firefox");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/SearchTest.java"'
-                sh 'cat src/test/java/com/example/hello_selenium_junit/SearchTest.java'
+                
+                sh 'cat src/test/java/com/example/hello_selenium_junit/imdbTest.java'
                 //sh './gradlew test'
             }
             post {
