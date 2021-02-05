@@ -13,7 +13,12 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'sed -i "s%firefox%${BROWSER}%g" "build.gradle"'
-                sh './gradlew test'
+                sh './gradlew  test'
+            }
+            post {
+                always {
+                    junit 'build/test-results/test/TEST-*.xml'
+                }
             }                 
         }
         stage('Build') {
