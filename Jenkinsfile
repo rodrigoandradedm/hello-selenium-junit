@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('setup') {
             steps {
-                git branch: 'master', url: 'http://10.250.14.1:8929/root/hello-selenium-junit'    
+                git branch: 'remote', url: 'http://10.250.14.1:8929/root/hello-selenium-junit'    
             }                 
         }
         stage('Test') {
