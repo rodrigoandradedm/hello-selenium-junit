@@ -17,8 +17,8 @@ pipeline {
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "chrome");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/RobobarTest.java"'
 
                 sh 'sed -i "s%capabilities.setCapability("browserName",  "chrome");%capabilities.setCapability("browserName",  "${BROWSER}");%g" "src/test/java/com/example/hello_selenium_junit/SearchTest.java"'
-
-                sh './gradlew test'
+                sh 'cat src/test/java/com/example/hello_selenium_junit/SearchTest.java'
+                //sh './gradlew test'
             }
             post {
                 always {
