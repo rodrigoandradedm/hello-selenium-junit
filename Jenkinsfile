@@ -18,8 +18,7 @@ pipeline {
 
                 sh 'sed -i "s%firefox%${BROWSER}%g" "src/test/java/com/example/hello_selenium_junit/SearchTest.java"'
                 
-                sh 'cat src/test/java/com/example/hello_selenium_junit/imdbTest.java'
-                //sh './gradlew test'
+                sh './gradlew test'
             }
             post {
                 always {
