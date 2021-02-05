@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 pipeline {
     agent any
+    environment {
+        BROWSER = 'firefox'
+    }
     stages {
         stage('setup') {
             steps {
@@ -9,6 +12,8 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'echo "${BROWSER}"'
+                //sh 'sed -i 's/capabilities.setCapability("browserName",  "firefox");/capabilities.setCapability("browserName",  "·{BROWSER}");/g' "src/test/java/com/example/hello_selenium_junit/*.java"'
                 sh './gradlew test'
             }                 
         }
