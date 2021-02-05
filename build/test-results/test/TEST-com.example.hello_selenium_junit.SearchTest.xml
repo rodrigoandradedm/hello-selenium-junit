@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.hello_selenium_junit.SearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-03T15:29:49" hostname="ubuntu" time="16.893">
+<testsuite name="com.example.hello_selenium_junit.SearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T09:39:22" hostname="ubuntu" time="25.453">
   <properties/>
-  <testcase name="googlesearch()" classname="com.example.hello_selenium_junit.SearchTest" time="16.893"/>
+  <testcase name="googlesearch()" classname="com.example.hello_selenium_junit.SearchTest" time="25.453"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1612366191280	geckodriver	INFO	Listening on 127.0.0.1:18545
-1612366192094	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBp2bgn"
-*** You are running in headless mode.
-
-(firefox:94651): GLib-GObject-WARNING **: 16:29:52.771: invalid (NULL) pointer instance
-
-(firefox:94651): GLib-GObject-CRITICAL **: 16:29:52.771: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
-
-(/usr/lib/firefox/firefox:94916): GLib-GObject-WARNING **: 16:29:53.594: invalid (NULL) pointer instance
-
-(/usr/lib/firefox/firefox:94916): GLib-GObject-CRITICAL **: 16:29:53.594: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
-
-(/usr/lib/firefox/firefox:94936): GLib-GObject-WARNING **: 16:29:53.885: invalid (NULL) pointer instance
-
-(/usr/lib/firefox/firefox:94936): GLib-GObject-CRITICAL **: 16:29:53.885: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-
-(/usr/lib/firefox/firefox:95004): GLib-GObject-WARNING **: 16:29:56.117: invalid (NULL) pointer instance
-
-(/usr/lib/firefox/firefox:95004): GLib-GObject-CRITICAL **: 16:29:56.117: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
-1612366196252	Marionette	INFO	Listening on port 46279
-1612366196367	Marionette	WARN	TLS certificate errors will be ignored for this session
-Feb 03, 2021 4:29:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+  <system-err><![CDATA[Feb 05, 2021 10:39:32 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1612366205619	Marionette	INFO	Stopped listening on port 46279
-
-###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
 ]]></system-err>
 </testsuite>

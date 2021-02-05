@@ -33,7 +33,7 @@ dependencies {
 test {
     useJUnitPlatform()
     systemProperty "selenide.browser", "firefox"
-    systemProperty "selenide.headless", "true"
+    //systemProperty "selenide.headless", "true"
 }
 allure {
     autoconfigure = true

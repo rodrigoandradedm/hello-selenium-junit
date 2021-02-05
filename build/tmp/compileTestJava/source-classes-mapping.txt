@@ -1,4 +1,6 @@
-com/example/hello_selenium_junit/SearchTest.java
- com.example.hello_selenium_junit.SearchTest
 com/example/hello_selenium_junit/imdbTest.java
  com.example.hello_selenium_junit.imdbTest
+com/example/hello_selenium_junit/SearchTest.java
+ com.example.hello_selenium_junit.SearchTest
+com/example/hello_selenium_junit/RobobarTest.java
+ com.example.hello_selenium_junit.RobobarTest

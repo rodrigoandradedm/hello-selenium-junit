@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,12 +21,10 @@ public class imdbTest {
     private Map<String, Object> vars;
     JavascriptExecutor js;
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName",  "firefox");
-        FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/"), capabilities);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }

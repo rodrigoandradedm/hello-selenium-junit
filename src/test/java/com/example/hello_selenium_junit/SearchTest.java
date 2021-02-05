@@ -4,9 +4,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,10 +18,10 @@ public class SearchTest {
     JavascriptExecutor js;
 
     @BeforeEach
-    public void setUp() {
-        FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
-        driver = new FirefoxDriver(options);
+    public void setUp() throws MalformedURLException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName",  "firefox");
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
