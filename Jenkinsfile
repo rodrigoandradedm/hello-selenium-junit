@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "${BROWSER}"'
-                sh 'sed -i "s%firefox/${BROWSER}%g" "build.gradle"'
+                sh 'sed -i "s%firefox%${BROWSER}%g" "build.gradle"'
                 sh './gradlew test'
             }                 
         }
