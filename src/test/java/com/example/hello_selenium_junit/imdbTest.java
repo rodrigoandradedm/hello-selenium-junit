@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,9 +20,11 @@ public class imdbTest {
     JavascriptExecutor js;
     @BeforeEach
     public void setUp() {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName",  "firefox");
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
-        driver = new FirefoxDriver(options);
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
